@@ -1,21 +1,21 @@
 <div align="center" id="trendradar">
 
-<a href="https://github.com/sansan0/TrendRadar" title="TrendRadar">
+<a href="https://github.com/nomiga-ww/TrendRadar" title="TrendRadar">
   <img src="/_image/banner.webp" alt="TrendRadar Banner" width="80%">
 </a>
 
 🚀 Deploy in <strong>30 seconds</strong> — Your Smart Trending News Assistant
 
-<a href="https://trendshift.io/repositories/14726" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14726" alt="sansan0%2FTrendRadar | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/14726" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14726" alt="nomiga-ww%2FTrendRadar | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 <a href="https://share.302.ai/mEOUzG" target="_blank" title="One-stop AI Models & APIs Platform"><img src="_image/302ai.png" alt="302.AI logo" height="50"/></a>
 <a href="https://shandianshuo.cn" target="_blank" title="AI Voice Input, 4x Faster Than Typing ⚡"><img src="_image/shandianshuo.png" alt="FlashSpeak logo" height="51"/></a>
 
-[![GitHub Stars](https://img.shields.io/github/stars/sansan0/TrendRadar?style=flat-square&logo=github&color=yellow)](https://github.com/sansan0/TrendRadar/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/sansan0/TrendRadar?style=flat-square&logo=github&color=blue)](https://github.com/sansan0/TrendRadar/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/nomiga-ww/TrendRadar?style=flat-square&logo=github&color=yellow)](https://github.com/nomiga-ww/TrendRadar/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/nomiga-ww/TrendRadar?style=flat-square&logo=github&color=blue)](https://github.com/nomiga-ww/TrendRadar/network/members)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v3.4.0-blue.svg)](https://github.com/sansan0/TrendRadar)
-[![MCP](https://img.shields.io/badge/MCP-v1.0.2-green.svg)](https://github.com/sansan0/TrendRadar)
+[![Version](https://img.shields.io/badge/version-v3.4.0-blue.svg)](https://github.com/nomiga-ww/TrendRadar)
+[![MCP](https://img.shields.io/badge/MCP-v1.0.2-green.svg)](https://github.com/nomiga-ww/TrendRadar)
 
 [![WeWork](https://img.shields.io/badge/WeWork-Notification-00D4AA?style=flat-square)](https://work.weixin.qq.com/)
 [![WeChat](https://img.shields.io/badge/WeChat-Notification-00D4AA?style=flat-square)](https://weixin.qq.com/)
@@ -28,8 +28,8 @@
 [![Slack](https://img.shields.io/badge/Slack-Notification-00D4AA?style=flat-square)](https://slack.com/)
 
 
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Automation-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/sansan0/TrendRadar)
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployment-4285F4?style=flat-square&logo=github&logoColor=white)](https://sansan0.github.io/TrendRadar)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Automation-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/nomiga-ww/TrendRadar)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployment-4285F4?style=flat-square&logo=github&logoColor=white)](https://nomiga-ww.github.io/TrendRadar)
 [![Docker](https://img.shields.io/badge/Docker-Deployment-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/r/wantcat/trendradar)
 [![MCP Support](https://img.shields.io/badge/MCP-AI_Analysis-FF6B6B?style=flat-square&logo=ai&logoColor=white)](https://modelcontextprotocol.io/)
 
@@ -246,7 +246,7 @@ One-click GitHub Fork to use, no programming required.
 >
 > 1-minute deployment: WeWork (mobile notification)
 
-**💡 Tip:** Want a **real-time updated** web version? After forking, go to your repo Settings → Pages and enable GitHub Pages. [Preview Effect](https://sansan0.github.io/TrendRadar/).
+**💡 Tip:** Want a **real-time updated** web version? After forking, go to your repo Settings → Pages and enable GitHub Pages. [Preview Effect](https://nomiga-ww.github.io/TrendRadar/).
 
 ### **Reduce APP Dependencies**
 
@@ -266,7 +266,7 @@ Transform from "algorithm recommendation captivity" to "actively getting the inf
 ## 📝 Changelog
 
 >**Upgrade Instructions**:
-- **📌 Check Latest Updates**: **[Original Repository Changelog](https://github.com/sansan0/TrendRadar?tab=readme-ov-file#-changelog)**
+- **📌 Check Latest Updates**: **[Original Repository Changelog](https://github.com/nomiga-ww/TrendRadar?tab=readme-ov-file#-changelog)**
 - **Tip**: Do NOT update this project via **Sync fork**. Check [Changelog] to understand specific [Upgrade Methods] and [Features]
 - **Minor Version Update**: Upgrading from v2.x to v2.y, replace `main.py` in your forked repo with the latest version
 - **Major Version Upgrade**: Upgrading from v1.x to v2.y, recommend deleting existing fork and re-forking to save effort and avoid config conflicts
@@ -316,7 +316,7 @@ Transform from "algorithm recommendation captivity" to "actively getting the inf
 > 📖 **Detailed Configuration Tutorial**: [Quick Start - Bark Push](#-quick-start)
 
 **🐛 Bug Fix**
-- Fixed issue where `ntfy_server_url` in `config.yaml` was ignored ([#345](https://github.com/sansan0/TrendRadar/issues/345))
+- Fixed issue where `ntfy_server_url` in `config.yaml` was ignored ([#345](https://github.com/nomiga-ww/TrendRadar/issues/345))
 
 **🔧 Upgrade Instructions**:
 - **GitHub Fork Users**: Update `main.py`, `config/config.yaml`, `.github/workflows/crawler.yml`
@@ -437,7 +437,7 @@ Transform from "algorithm recommendation captivity" to "actively getting the inf
 
 ### 2025/10/10 - v2.4.3
 
-> Thanks to [nidaye996](https://github.com/sansan0/TrendRadar/issues/98) for discovering the UX issue
+> Thanks to [nidaye996](https://github.com/nomiga-ww/TrendRadar/issues/98) for discovering the UX issue
 
 - **Updates**:
   - Refactored "Silent Push Mode" naming to "Push Time Window Control", improving feature comprehension
@@ -479,7 +479,7 @@ Transform from "algorithm recommendation captivity" to "actively getting the inf
 
 ### 2025/09/26 - v2.3.2
 
-- Fixed email notification config check being missed ([#88](https://github.com/sansan0/TrendRadar/issues/88))
+- Fixed email notification config check being missed ([#88](https://github.com/nomiga-ww/TrendRadar/issues/88))
 
 **Fix Description**:
 - Solved the issue where system still prompted "No webhook configured" even with correct email notification setup
@@ -595,7 +595,7 @@ WeWork and Telegram push messages have length limits, I adopted splitting messag
 ### 2025/06/21 - v1.2.1
 
 Before this version, not only main.py needs copy replacement, crawler.yml also needs you to copy replacement
-https://github.com/sansan0/TrendRadar/blob/master/.github/workflows/crawler.yml
+https://github.com/nomiga-ww/TrendRadar/blob/master/.github/workflows/crawler.yml
 
 
 ### 2025/06/19 - v1.2.0
@@ -663,7 +663,7 @@ frequency_words.txt file added **required word** feature, using + sign
 
 ## 🚀 Quick Start
 
-> **📖 Reminder**: Fork users should first **[check the latest official documentation](https://github.com/sansan0/TrendRadar?tab=readme-ov-file)** to ensure the configuration steps are up to date.
+> **📖 Reminder**: Fork users should first **[check the latest official documentation](https://github.com/nomiga-ww/TrendRadar?tab=readme-ov-file)** to ensure the configuration steps are up to date.
 
 1. **Fork this project** to your GitHub account
 
@@ -754,7 +754,7 @@ frequency_words.txt file added **required word** feature, using + sign
 
    Two methods available, **Method 1** is simpler, **Method 2** is more complex (but stable push)
 
-   Method 1 discovered and suggested by **ziventian**, thanks to them. Default is personal push, group push can be configured via [#97](https://github.com/sansan0/TrendRadar/issues/97)
+   Method 1 discovered and suggested by **ziventian**, thanks to them. Default is personal push, group push can be configured via [#97](https://github.com/nomiga-ww/TrendRadar/issues/97)
 
    **Method 1:**
 
@@ -949,12 +949,12 @@ frequency_words.txt file added **required word** feature, using + sign
    > **Auto-detect**: When using above emails, no need to manually configure `EMAIL_SMTP_SERVER` and `EMAIL_SMTP_PORT`, system auto-detects.
    >
    > **Feedback Notice**:
-   > - If you successfully test with **other email providers**, please open an [Issue](https://github.com/sansan0/TrendRadar/issues) to let us know, we'll add to support list
-   > - If above email configurations are incorrect or unusable, please also open an [Issue](https://github.com/sansan0/TrendRadar/issues) for feedback to help improve the project
+   > - If you successfully test with **other email providers**, please open an [Issue](https://github.com/nomiga-ww/TrendRadar/issues) to let us know, we'll add to support list
+   > - If above email configurations are incorrect or unusable, please also open an [Issue](https://github.com/nomiga-ww/TrendRadar/issues) for feedback to help improve the project
    >
    > **Special Thanks**:
-   > - Thanks to [@DYZYD](https://github.com/DYZYD) for contributing 189 Mail (189.cn) configuration and completing self-send-receive testing ([#291](https://github.com/sansan0/TrendRadar/issues/291))
-   > - Thanks to [@longzhenren](https://github.com/longzhenren) for contributing Aliyun Mail (aliyun.com) configuration and completing testing ([#344](https://github.com/sansan0/TrendRadar/issues/344))
+   > - Thanks to [@DYZYD](https://github.com/DYZYD) for contributing 189 Mail (189.cn) configuration and completing self-send-receive testing ([#291](https://github.com/nomiga-ww/TrendRadar/issues/291))
+   > - Thanks to [@longzhenren](https://github.com/longzhenren) for contributing Aliyun Mail (aliyun.com) configuration and completing testing ([#344](https://github.com/nomiga-ww/TrendRadar/issues/344))
 
    **Common Email Settings:**
 
@@ -1281,13 +1281,13 @@ frequency_words.txt file added **required word** feature, using + sign
    - **Method 2**: Direct access `https://github.com/YourUsername/TrendRadar/actions`
 
    **Example comparison**:
-   - ❌ Author's project: `https://github.com/sansan0/TrendRadar/actions`
+   - ❌ Author's project: `https://github.com/nomiga-ww/TrendRadar/actions`
    - ✅ Your project: `https://github.com/YourUsername/TrendRadar/actions`
 
    **Testing steps**:
    1. Enter your project's Actions page
    2. Find **"Hot News Crawler"** and click in
-      - If you don't see this text, refer to [#109](https://github.com/sansan0/TrendRadar/issues/109) to solve
+      - If you don't see this text, refer to [#109](https://github.com/nomiga-ww/TrendRadar/issues/109) to solve
    3. Click **"Run workflow"** button on the right to run
    4. Wait about 1 minute, messages will be pushed to your configured platform
 
@@ -1354,7 +1354,7 @@ platforms:
     name: "Wallstreetcn"
   # Add more platforms...
 ```
-If you don't know how to look, you can directly copy the partially organized [Platform Configuration](https://github.com/sansan0/TrendRadar/issues/95)
+If you don't know how to look, you can directly copy the partially organized [Platform Configuration](https://github.com/nomiga-ww/TrendRadar/issues/95)
 
 </details>
 
@@ -1756,14 +1756,14 @@ Updated: 2025-01-15 12:30:15
 ```bash
 # Create config directory and download config files
 mkdir -p config output
-wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/config.yaml -P config/
-wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/frequency_words.txt -P config/
+wget https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/config/config.yaml -P config/
+wget https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/config/frequency_words.txt -P config/
 ```
 Or **Manual Creation**:
 1. Create `config` folder in current directory
 2. Download config files:
-   - Visit https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/config.yaml → Right-click "Save As" → Save to `config\config.yaml`
-   - Visit https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/frequency_words.txt → Right-click "Save As" → Save to `config\frequency_words.txt`
+   - Visit https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/config/config.yaml → Right-click "Save As" → Save to `config\config.yaml`
+   - Visit https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/config/frequency_words.txt → Right-click "Save As" → Save to `config\frequency_words.txt`
 
 Final directory structure should be:
 ```
@@ -1800,12 +1800,12 @@ docker run -d --name trend-radar \
    cd trendradar
 
    # Download config file templates
-   wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/config.yaml -P config/
-   wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/frequency_words.txt -P config/
+   wget https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/config/config.yaml -P config/
+   wget https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/config/frequency_words.txt -P config/
 
    # Download docker-compose config
-   wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/docker/.env
-   wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/docker/docker-compose.yml
+   wget https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/docker/.env
+   wget https://raw.githubusercontent.com/nomiga-ww/TrendRadar/master/docker/docker-compose.yml
    ```
 
 Final directory structure should be:
@@ -1868,7 +1868,7 @@ If you need custom code modifications or build your own image:
 
 ```bash
 # Clone project
-git clone https://github.com/sansan0/TrendRadar.git
+git clone https://github.com/nomiga-ww/TrendRadar.git
 cd TrendRadar
 
 # Modify config files
@@ -2490,17 +2490,17 @@ A: You can top up as needed, pay-as-you-go. Major AI model prices are now relati
 - If you have niche requirements, you can develop based on my project yourself, even with zero programming experience
 - All my open-source projects use my own **AI-assisted software** to improve development efficiency, this tool is now open-source
 - **Core Function**: Quickly filter project code to feed AI, you just need to add personal requirements
-- **Project Address**: https://github.com/sansan0/ai-code-context-helper
+- **Project Address**: https://github.com/nomiga-ww/ai-code-context-helper
 
 ### Other Projects
 
 > 📍 Chairman Mao's Footprint Map - Interactive dynamic display of complete trajectory 1893-1976. Welcome comrades to contribute data
 
-- https://github.com/sansan0/mao-map
+- https://github.com/nomiga-ww/mao-map
 
 > Bilibili Comment Data Visualization Analysis Software
 
-- https://github.com/sansan0/bilibili-comment-analyzer
+- https://github.com/nomiga-ww/bilibili-comment-analyzer
 
 
 ### Project Workflow Diagram
@@ -2554,7 +2554,7 @@ flowchart TD
     style Q fill:#c8e6c9
 ```
 
-[![Star History Chart](https://api.star-history.com/svg?repos=sansan0/TrendRadar&type=Date)](https://www.star-history.com/#sansan0/TrendRadar&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=nomiga-ww/TrendRadar&type=Date)](https://www.star-history.com/#nomiga-ww/TrendRadar&Date)
 
 <br>
 
