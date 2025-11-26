@@ -15,24 +15,26 @@ jobs:
   crawl:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.ref }}
           clean: true
-          
+          persist-credentials: true
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-          
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
+
       - name: Verify required files
         run: |
           echo "🔍 检查必需的配置文件..."
@@ -45,7 +47,7 @@ jobs:
             exit 1
           fi
           echo "✅ 配置文件检查通过"
-          
+
       - name: Run crawler
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
@@ -66,46 +68,52 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GITHUB_ACTIONS: true
         run: python main.py
-        
+
       - name: Commit and push if changes
         env:
-          BRANCH_NAME: ${{ github.event.repository.default_branch }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          
-          echo "🔄 Syncing with remote (branch: $BRANCH_NAME)..."
-          git fetch origin $BRANCH_NAME
-          
-          # 保存当前更改
-          git stash --include-untracked || echo "Nothing to stash"
-          
-          # 同步到远程最新
-          git reset --hard origin/$BRANCH_NAME
-          
-          # 恢复本次更改
-          git stash pop || echo "Nothing to pop"
-          
+          set -euo pipefail
+
+          # 配置提交者信息
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # 从 GITHUB_REF 提取当前分支名（refs/heads/<branch> -> <branch>）
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          echo "🔄 Branch derived from GITHUB_REF: $BRANCH_NAME"
+
+          # 确保有远程引用历史
+          if ! git fetch --no-tags --prune origin "$BRANCH_NAME"; then
+            echo "⚠️ Warning: Failed to fetch from origin/$BRANCH_NAME (this may be expected for new branches)"
+          fi
+
+          # 添加变化并检查是否有提交
           git add -A
-          
-          if git diff --quiet && git diff --staged --quiet; then
+
+          if git diff --cached --quiet; then
             echo "📭 No changes to commit"
             exit 0
           fi
-          
-          echo "📝 Committing changes..."
+
           TIMESTAMP=$(TZ=Asia/Shanghai date "+%Y-%m-%d %H:%M:%S")
           git commit -m "Auto update by GitHub Actions at $TIMESTAMP"
-          
-          echo "⬆️ Pushing changes with retry..."
-          for i in {1..5}; do
-            git pull --rebase origin $BRANCH_NAME && git push origin $BRANCH_NAME && {
-              echo "✅ Successfully pushed on attempt $i"
-              exit 0
-            }
-            echo "⚠️ Attempt $i failed, waiting $((i*3)) seconds..."
-            sleep $((i * 3))
-          done
-          
-          echo "❌ Failed to push after 5 attempts"
-          exit 1
+
+          # 尝试把远端最新变更 rebase 到当前 HEAD，若冲突则中止并提示手动处理
+          echo "⬆️ Attempting to rebase onto origin/$BRANCH_NAME"
+          if ! git pull --rebase origin "$BRANCH_NAME"; then
+            echo "⚠️ git pull --rebase failed (possible merge conflicts)."
+            echo "Please resolve conflicts on branch $BRANCH_NAME manually:"
+            echo "  1. git checkout $BRANCH_NAME"
+            echo "  2. git pull --rebase origin $BRANCH_NAME"
+            echo "  3. Resolve conflicts in your editor"
+            echo "  4. git add <resolved-files>"
+            echo "  5. git rebase --continue"
+            echo "  6. git push origin $BRANCH_NAME"
+            exit 1
+          fi
+
+          # 使用 HEAD:$BRANCH_NAME 推送，避免 src refspec <name> does not match any
+          echo "⬆️ Pushing changes to origin HEAD:$BRANCH_NAME"
+          git push origin "HEAD:$BRANCH_NAME"
